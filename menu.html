@@ -185,1780 +185,630 @@
 
 
 	<!-- Title Page -->
-	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/bg-title-page-01.jpg);">
-		<h2 class="tit6 t-center">
-			EL GRAN BANQUETE <br> MENÚ
-		</h2>
-	</section>
-	<!-- Main menu -->
-	<section class="section-mainmenu p-t-110 p-b-70 bg1-pattern">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10 col-lg-6 p-r-35 p-r-15-lg m-l-r-auto">
-					<div class="wrap-item-mainmenu p-b-22">
-						<h3 class="tit-mainmenu tit10 p-b-25">
-							ENTRADAS
-						</h3>
+<style>
+    .hero-menu {
+        height: 100vh; /* Ocupa toda la pantalla al entrar */
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                    url('images/header-menu-01.jpg'); /* Usa tu imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #D4AF37; /* Dorado metálico */
+        text-align: center;
+        position: relative;
+    }
+
+    .hero-title {
+        font-family: 'Courgette', cursive; /* O la fuente que uses en tit4 */
+        font-size: 5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero-subtitle {
+        color: white;
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    /* El indicador para bajar */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+    }
+
+    .scroll-indicator i {
+        font-size: 2rem;
+        display: block;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+        40% {transform: translateY(-10px) translateX(-50%);}
+        60% {transform: translateY(-5px) translateX(-50%);}
+    }
+</style>
+
+<header class="hero-menu">
+    <h1 class="hero-title">El Gran Banquete</h1>
+    <p class="hero-subtitle">Experiencia Gastronómica de Lujo</p>
+    
+    <div style="width: 100px; height: 2px; background: #D4AF37; margin-bottom: 20px;"></div>
+    
+    <p class="text-white col-md-6 italic">
+        "Donde la tradición peruana se encuentra con la elegancia contemporánea."
+    </p>
+
+    <a href="#menu-start" class="scroll-indicator">
+        <span class="small text-uppercase d-block mb-2">Explorar Carta</span>
+        <i class="fa fa-chevron-down"></i>
+    </a>
+</header>
+
+<div id="menu-start"></div>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center h-100 p-t-170 p-b-165">
+            <h2 class="tit4 t-center">ENTRADAS Y APERITIVOS</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/causa_limena.jpg" class="card-img-top" alt="Causa Limeña" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Causa Limeña</h5>
+                        <p class="txt23">Fina masa de papa amarilla con ají, rellena de pollo artesanal.</p>
+                        <span class="txt22 text-success">$18.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/Papa-a-la-Huancaina.jpg" class="card-img-top" alt="Papa a la Huancaina" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Papa a la Huancaina</h5>
+                        <p class="txt23">Papas sancochadas bañadas en una cremosa salsa de queso y ají amarillo.</p>
+                        <span class="txt22 text-success">$15.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/ensalada_rusa.jpg" class="card-img-top" alt="Ensalada Rusa" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Ensalada Rusa</h5>
+                        <p class="txt23">Clásica combinación de beterraga, zanahoria y arvejas con mayonesa de la casa.</p>
+                        <span class="txt22 text-success">$14.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/ensalada_de_pollo.jpg" class="card-img-top" alt="Ensalada de Pollo" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Ensalada de Pollo</h5>
+                        <p class="txt23">Mix de vegetales frescos con láminas de pechuga a la plancha.</p>
+                        <span class="txt22 text-success">$19.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">PARRILLAS Y ASADOS</h2>
+        </div>
+    </div>
+	
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/anticuchos_de_corazon.jpg" class="card-img-top" alt="Anticuchos de Corazón" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Anticuchos de Corazón</h5>
+                        <p class="txt23">Anticuchos de corazón de res a la parrilla, acompañados de papas fritas y salsa criolla.</p>
+                        <span class="txt22 text-success">$38.00</span>
+                    </div>
+                </div>
+            </div>
+			<div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/parrilla_mixta.jpg" class="card-img-top" alt="Parrilla Mixta" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Parrilla Mixta</h5>
+                        <p class="txt23">Selección de cortes premium de res, cerdo y embutidos finos.</p>
+                        <span class="txt22 text-success">$45.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/bistec_a_lo_pobre.webp" class="card-img-top" alt="Bistec a lo Pobre" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Bistec a lo Pobre</h5>
+                        <p class="txt23">Jugoso bistec acompañado de papas fritas, arroz, huevo y plátano frito.</p>
+                        <span class="txt22 text-success">$32.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/chancho_a_la_caja_china.jpg" class="card-img-top" alt="Chancho a la Caja China" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Chancho a la Caja China</h5>
+                        <p class="txt23">Chancho asado en salsa de caja china, acompañado de arroz y ensalada.</p>
+                        <span class="txt22 text-success">$35.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">PLATILLOS DE MARISCOS</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/ceviche_clasico.jpg" class="card-img-top" alt="Ceviche Clásico" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Ceviche Clásico</h5>
+                        <p class="txt23">Pescado fresco del día marinado en limón norteño y ají limo.</p>
+                        <span class="txt22 text-success">$35.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/arroz_de_mariscos.jpg" class="card-img-top" alt="Arroz de Mariscos" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Arroz de Mariscos</h5>
+                        <p class="txt23">Arroz meloso con mixtura de mariscos frescos y toque de pisco.</p>
+                        <span class="txt22 text-success">$38.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/jugoso.jpg" class="card-img-top" alt="Jugoso de Pescado" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Jugoso de Pescado</h5>
+                        <p class="txt23">Pescado jugoso cocido en caldo de verduras con toque de aji.</p>
+                        <span class="txt22 text-success">$38.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/leche_de_tigre.jpg" class="card-img-top" alt="Leche de Tigre" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Leche de Tigre</h5>
+                        <p class="txt23">Salsa picante a base de pisco, limón y ají limo, perfecta para acompañar mariscos.</p>
+                        <span class="txt22 text-success">$25.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">SOPAS Y CALDOS</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/caldo_de_gallina.jpg" class="card-img-top" alt="Caldo de Gallina" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Caldo de Gallina</h5>
+                        <p class="txt23">Concentrado de gallina de corral con fideos, huevo y cebollita china.</p>
+                        <span class="txt22 text-success">$22.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/shambar.jpg" class="card-img-top" alt="Shambar" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Shambar</h5>
+                        <p class="txt23">Sopa tradicional trujillana a base de trigo, carnes y menestras.</p>
+                        <span class="txt22 text-success">$20.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/caldo_de_res.jpg" class="card-img-top" alt="Caldo de Res" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Caldo de Res</h5>
+                        <p class="txt23">Sustancioso caldo de carne de res tierna con verduras frescas.</p>
+                        <span class="txt22 text-success">$24.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">COMIDA CRIOLLA</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/aji_de_gallina.jpg" class="card-img-top" alt="Ají de Gallina" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Ají de Gallina</h5>
+                        <p class="txt23">Fina crema de ají amarillo con pollo deshilachado y arroz.</p>
+                        <span class="txt22 text-success">$25.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/lomo_saltado.jpg" class="card-img-top" alt="Lomo Saltado" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Lomo Saltado</h5>
+                        <p class="txt23">Trozos de lomo fino salteados al wok con cebolla, tomate y papas fritas.</p>
+                        <span class="txt22 text-success">$31.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/arroz_con_pollo.jpg" class="card-img-top" alt="Arroz con Pollo" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Arroz con Pollo</h5>
+                        <p class="txt23">Arroz graneado al cilantro con presa de pollo dorada.</p>
+                        <span class="txt22 text-success">$26.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/carapulcra_de_chancho.jpg" class="card-img-top" alt="Carapulcra" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Carapulcra de Chancho</h5>
+                        <p class="txt23">Guiso tradicional de papa seca con carne de cerdo seleccionada.</p>
+                        <span class="txt22 text-success">$28.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/seco_pollo.jpg" class="card-img-top" alt="Seco de Pollo" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Seco de Pollo</h5>
+                        <p class="txt23">Pollo guisado en salsa de culantro con frijoles y arroz.</p>
+                        <span class="txt22 text-success">$26.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/tallarines_verdes.jpg" class="card-img-top" alt="Tallarines Verdes" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Tallarines Verdes</h5>
+                        <p class="txt23">Pastas en crema de albahaca y espinaca con bistec o pollo.</p>
+                        <span class="txt22 text-success">$27.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">COMIDA TRADICIONAL</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/pachamanca.jpg" class="card-img-top" alt="Pachamanca" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Pachamanca a la Piedra</h5>
+                        <p class="txt23">Banquete ancestral cocido bajo tierra con piedras calientes y hierbas andinas.</p>
+                        <span class="txt22 text-success">$42.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/tamales.jpg" class="card-img-top" alt="Tamales" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Tamales Criollos</h5>
+                        <p class="txt23">Masa de maíz artesanal rellena de carne, envuelta en hojas de panca.</p>
+                        <span class="txt22 text-success">$12.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/juane_de_gallina.webp" class="card-img-top" alt="Juane de Gallina" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Juane de Gallina</h5>
+                        <p class="txt23">Gallina cocida en salsa de caja china, acompañada de arroz y ensalada.</p>
+                        <span class="txt22 text-success">$32.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">POSTRES Y DULCES</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/Arroz-con-leche.jpg" class="card-img-top" alt="Arroz con Leche" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Arroz con Leche Clásico</h5>
+                        <p class="txt23">Cremosa textura infusionada con canela y esencia de vainilla.</p>
+                        <span class="txt22 text-success">$10.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/suspiro_limeno.jpg" class="card-img-top" alt="Suspiro Limeño" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Suspiro a la Limeña</h5>
+                        <p class="txt23">Manjar blanco suave coronado con merengue al oporto.</p>
+                        <span class="txt22 text-success">$12.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/crema-volteada.webp" class="card-img-top" alt="Crema Volteada" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Crema Volteada</h5>
+                        <p class="txt23">Delicado flan de leche con un baño de caramelo artesanal.</p>
+                        <span class="txt22 text-success">$11.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/mazamorra_morada.jpg" class="card-img-top" alt="Mazamorra Morada" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Mazamorra Morada</h5>
+                        <p class="txt23">Tradicional postre de maíz morado con frutas secas.</p>
+                        <span class="txt22 text-success">$9.00</span>
+                    </div>
+                </div>
+            </div>
+			<div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/torta_helada.png" class="card-img-top" alt="Torta Helada" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Torta Helada</h5>
+                        <p class="txt23">Postre frío y refrescante estructurado con capas de crema y frutas.</p>
+                        <span class="txt22 text-success">$9.00</span>
+                    </div>
+                </div>
+            </div>
+			<div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/mousse_maracuya.jpg" class="card-img-top" alt="Mousse de Maracuyá" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Mousse de Maracuyá</h5>
+                        <p class="txt23">Delicado postre de maracuyá con una textura suave y cremosa.</p>
+                        <span class="txt22 text-success">$9.00</span>
+                    </div>
+                </div>
+            </div>
+			<div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/torta_de_chocolate.jpg" class="card-img-top" alt="Torta de Chocolate" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Torta de Chocolate</h5>
+                        <p class="txt23">Deliciosa torta de chocolate con capas suaves y un sabor intenso.</p>
+                        <span class="txt22 text-success">$9.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">BEBIDAS Y REFRESCOS</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/agua_mineral.jpg" class="card-img-top" alt="Agua Mineral" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Agua Mineral</h5>
+                        <p class="txt23">Agua mineral natural sin gas.</p>
+                        <span class="txt22 text-success">$5.00</span>
+                    </div>
+                </div>
+            </div>
+			<div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/jugo__de_frutas.jpg" class="card-img-top" alt="Jugo de Frutas" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Jugo de Frutas</h5>
+                        <p class="txt23">Refrescante jugo de frutas naturales recién exprimido.</p>
+                        <span class="txt22 text-success">$10.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/chicha_morada.jpg" class="card-img-top" alt="Chicha Morada" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Chicha Morada Especial</h5>
+                        <p class="txt23">Refrescante bebida de maíz morado con notas de piña y canela.</p>
+                        <span class="txt22 text-success">$8.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/limonada_frozen.jpg" class="card-img-top" alt="Limonada Frozen" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Limonada Frozen</h5>
+                        <p class="txt23">Refrescante granizado de limón natural recién exprimido.</p>
+                        <span class="txt22 text-success">$10.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/cafe_americano.jpg" class="card-img-top" alt="Café Americano" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Café Americano</h5>
+                        <p class="txt23">Café americano premium de grano tostado artesanal.</p>
+                        <span class="txt22 text-success">$7.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/capuccino.webp" class="card-img-top" alt="Capuccino" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Capuccino</h5>
+                        <p class="txt23">Café con leche vaporizada y espuma de leche.</p>
+                        <span class="txt22 text-success">$10.00</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="section-lunch bgwhite">
+    <div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
+        <div class="bg1-overlay t-center p-t-170 p-b-165">
+            <h2 class="tit4 t-center">COCTELERÍA Y TRAGOS</h2>
+        </div>
+    </div>
+
+    <div class="container p-t-60 p-b-60" style="max-width: 900px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/cerveza_rubia.jpg" class="card-img-top" alt="Cerveza Rubia" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Cerveza Rubia</h5>
+                        <p class="txt23">Cerveza refrescante y ligera, perfecta para cualquier ocasión.</p>
+                        <span class="txt22 text-success">$8.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/pisco_sour.jpg" class="card-img-top" alt="Pisco Sour" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Pisco Sour Premium</h5>
+                        <p class="txt23">Nuestra bebida bandera, con pisco quebranta y toque cítrico.</p>
+                        <span class="txt22 text-success">$25.00</span>
+                    </div>+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/coctel_machu_pichu.jpg" class="card-img-top" alt="Machu Picchu" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Cóctel Machu Picchu</h5>
+                        <p class="txt23">Mezcla exótica de pisco, menta y granadina en capas.</p>
+                        <span class="txt22 text-success">$28.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/vino_tinto.jpg" class="card-img-top" alt="Vino Tinto" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Vino Tinto de la Casa</h5>
+                        <p class="txt23">Copa de vino reserva, ideal para acompañar nuestras carnes.</p>
+                        <span class="txt22 text-success">$22.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/pina_colada.jpg" class="card-img-top" alt="Piña Colada" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Piña Colada</h5>
+                        <p class="txt23">Mezcla tropical de piña, coco y ron blanco, perfecta para días soleados.</p>
+                        <span class="txt22 text-success">$10.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="./images/new/champagne.jpg" class="card-img-top" alt="Champaña" style="height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="txt21">Champaña</h5>
+                        <p class="txt23">Espumoso y elegante, perfecto para celebraciones especiales.</p>
+                        <span class="txt22 text-success">$35.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Causa Limeña 
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$29.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Papa a la Huancaína
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Feugiat maximus neque pharetra
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Ensalada Rusa
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$12.19
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Tamales de Cerdo
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Tamales de Pollo
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$12.19
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								lorem asd das kdas oadsjio asdj
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Ensalada de Pollo  
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$21.89
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Etiam cursus facilisis tortor
-							</span>
-						</div>
-					</div>
-
-					<div class="wrap-item-mainmenu p-b-22">
-						<h3 class="tit-mainmenu tit10 p-b-25">
-							Bebidas
-						</h3>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Agua Mineral
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$29.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Jugo de Frutas
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Feugiat maximus neque pharetra
-							</span>
-						</div>
-						
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Chicha Morada
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Feugiat maximus neque pharetra
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Limonada Frozen
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$53.34
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Té 
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$62.45
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Café Americano
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$62.45
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-						
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Capuccino
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$62.45
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="col-md-10 col-lg-6 p-l-35 p-l-15-lg m-l-r-auto">
-					<div class="wrap-item-mainmenu p-b-22">
-						<h3 class="tit-mainmenu tit10 p-b-25">
-							PLATILLO PRINCIPAL
-						</h3>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Lomo Saltado
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$31.18
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Aji de Gallina
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$70.25
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Feugiat maximus neque pharetra
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Parrilla Mixta
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$36.19
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Etiam cursus facilisis tortor
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Bistec a lo pobre
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.50
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere 
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Ceviche Clásico
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$29.15
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Arroz con Mariscos
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$29.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Feugiat maximus neque pharetra
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Seco de pollo
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Tallarines verdes con Bistec
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Arroz con Pollo
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Caldo de Gallina
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Caldo de Res
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Shambar de Cerdo
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Carapulcra de Chancho
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Pachamanca a la Olla
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-
-					</div>
-
-					<div class="wrap-item-mainmenu p-b-22">
-						<h3 class="tit-mainmenu tit10 p-b-25">
-							Postres
-						</h3>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Torta de Chocolate
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$9.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Arroz con Leche
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Mazamorra Morada
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Helado de Vainilla
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-						
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Suspiro Limeño
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Crema Volteada
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-												<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Torta Helada
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-												<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Mousse de Maracuyá
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-												<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Turrón de Doña Pepa
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-
-
-					</div>
-
-
-
-
-					<div class="wrap-item-mainmenu p-b-22">
-						<h3 class="tit-mainmenu tit10 p-b-25">
-							Licor y cocteles
-						</h3>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Cerveza Rubia
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$9.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Cerveza Blanca
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$19.35
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Sed fermentum eros vitae eros
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Vino Tinto
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Champagne
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-						
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Pisco Sour
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-						<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Pisco Chilcano
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-												<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Piña Colada
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-												<!-- Item mainmenu -->
-						<div class="item-mainmenu m-b-36">
-							<div class="flex-w flex-b m-b-3">
-								<a href="#" class="name-item-mainmenu txt21">
-									Coctel Macchu Picchu
-								</a>
-
-								<div class="line-item-mainmenu bg3-pattern"></div>
-
-								<div class="price-item-mainmenu txt22">
-									$5.79
-								</div>
-							</div>
-
-							<span class="info-item-mainmenu txt23">
-								Duis pharetra ligula at urna dignissim
-							</span>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-<!-- ------------------------------- -->
-
-	<!-- Breakfast -->
-	<section class="section-lunch bgwhite">
-		<div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-01.jpg);">
-			<div class="bg1-overlay t-center p-t-170 p-b-165">
-				<h2 class="tit4 t-center">
-					Desayuno
-				</h2>
-			</div>
-		</div>
-
-
-
-
-
-
-		<div class="container">
-			<div class="row p-t-108 p-b-70">
-				<div class="col-md-8 col-lg-6 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/jugo_frutas.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Jugo de Frutas
-							</a>
-
-							<span class="txt23">
-								Aenean pharetra tortor dui in pellentesque
-							</span>
-
-							<span class="txt22 m-t-20">
-								$29.79
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/te.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Te
-							</a>
-
-							<span class="txt23">
-								Aenean condimentum ante erat
-							</span>
-
-							<span class="txt22 m-t-20">
-								$45.09
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/tamales.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Tamales de Pollo
-							</a>
-
-							<span class="txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-8 col-lg-6 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/cafe.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Café Americano
-							</a>
-
-							<span class="txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-
-							<span class="txt22 m-t-20">
-								$29.79
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/capuccino.webp" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Capuccino
-							</a>
-
-							<span class="txt23">
-								Sed fermentum eros vitae eros
-							</span>
-
-							<span class="txt22 m-t-20">
-								$45.09
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/Arroz-con-leche.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Arroz con Leche
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/crema-volteada.webp" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Crema Volteada
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/torta_helada.png" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Torta Helada
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/Arroz-con-leche.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Arroz con Leche
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-
-
-
-
-
-
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- Lunch -->
-	<section class="section-lunch bgwhite">
-		<div class="header-lunch parallax0 parallax100" style="background-image: url(images/header-menu-02.jpg);">
-			<div class="bg1-overlay t-center p-t-170 p-b-165">
-				<h2 class="tit4 t-center">
-					Almuerzo
-				</h2>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row p-t-108 p-b-70">
-				<div class="col-md-8 col-lg-6 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/causa_limena.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Causa Limeña
-							</a>
-
-							<span class="txt23">
-								Aenean pharetra tortor dui in pellentesque
-							</span>
-
-							<span class="txt22 m-t-20">
-								$29.79
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/Papa-a-la-Huancaina.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Papa a la Huancaína
-							</a>
-
-							<span class="txt23">
-								Aenean condimentum ante erat
-							</span>
-
-							<span class="txt22 m-t-20">
-								$45.09
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/ensalada_rusa.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Ensalada Rusa
-							</a>
-
-							<span class="txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-8 col-lg-6 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/ensalada-de-pollo.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Ensalada de Pollo
-							</a>
-
-							<span class="txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-
-							<span class="txt22 m-t-20">
-								$29.79
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/agua_mineral.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Agua Mineral
-							</a>
-
-							<span class="txt23">
-								Sed fermentum eros vitae eros
-							</span>
-
-							<span class="txt22 m-t-20">
-								$45.09
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/limonada_frozen.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Limonada Frozen
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
--------------------------------------------------
-
-<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/lomo-saltado.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Lomo Saltado
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/Aji-gallina.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Ají de Gallina
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/parrilla_mixta.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Parrilla Mixta
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/bistec-a-lo-pobre.webp" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Bistec a lo Pobre
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/ceviche.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Ceviche Clásico
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/arroz_mariscos.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Arroz con Mariscos
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/caldo_gallina.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Caldo de Gallina
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/caldo-de-res.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Caldo de Res
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/shambar.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Shambar de Cerdo
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/carapulcra-de-chancho.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Carapulcra de Chancho
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/pachamanca.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Pachamanca a la Olla
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/torta de chocolate.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Torta de Chocolate
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/helado.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Helado de Vainilla
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-					
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- Dinner -->
-	<section class="section-dinner bgwhite">
-		<div class="header-dinner parallax0 parallax100" style="background-image: url(images/header-menu-03.jpg);">
-			<div class="bg1-overlay t-center p-t-170 p-b-165">
-				<h2 class="tit4 t-center">
-					Cena
-				</h2>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row p-t-108 p-b-70">
-				<div class="col-md-8 col-lg-6 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/mousse_maracuya.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Mousse de Maracuyá
-							</a>
-
-							<span class="txt23">
-								Aenean pharetra tortor dui in pellentesque
-							</span>
-
-							<span class="txt22 m-t-20">
-								$29.79
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/suspiro_limeno.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Suspiro Limeño
-							</a>
-
-							<span class="txt23">
-								Aenean condimentum ante erat
-							</span>
-
-							<span class="txt22 m-t-20">
-								$45.09
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/torta_helada.png" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Torta Helada
-							</a>
-
-							<span class="txt23">
-								Aenean condimentum ante erat
-							</span>
-
-							<span class="txt22 m-t-20">
-								$45.09
-							</span>
-						</div>
-					</div>
-
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/cerveza_rubia.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Cerveza Rubia
-							</a>
-
-							<span class="txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-8 col-lg-6 m-l-r-auto">
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/cerveza_blanca.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Cerveza Blanca
-							</a>
-
-							<span class="txt23">
-								Proin lacinia nisl ut ultricies posuere nulla
-							</span>
-
-							<span class="txt22 m-t-20">
-								$29.79
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/vino_tinto.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Vino Tinto
-							</a>
-
-							<span class="txt23">
-								Sed fermentum eros vitae eros
-							</span>
-
-							<span class="txt22 m-t-20">
-								$45.09
-							</span>
-						</div>
-					</div>
-
-					<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/champagne.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Champaña
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-										<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/pisco_sour.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Pisco Sour
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-										<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/pisco_chilcano.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Pisco Chilcano
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-										<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/pina_colada.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Piña Colada
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-										<!-- Block3 -->
-					<div class="blo3 flex-w flex-col-l-sm m-b-30">
-						<div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-							<a href="#"><img src="images/new/machu_pichu.jpg" alt="IMG-MENU"></a>
-						</div>
-
-						<div class="text-blo3 size21 flex-col-l-m">
-							<a href="#" class="txt21 m-b-3">
-								Coctel Macchu Picchu
-							</a>
-
-							<span class="txt23">
-								Duis massa nibh porttitor nec imperdiet eget
-							</span>
-
-							<span class="txt22 m-t-20">
-								$12.75
-							</span>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
 
 
 	<!-- Sign up -->
