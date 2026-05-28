@@ -1625,3 +1625,17 @@ body {padding-right: 0px !important;}
   border-radius: 10px;
   background-color: #ec1d25;
 }
+.img-team{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.item-gallery-sidebar img,
+.wrap-gallery-footer img,
+.item-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
