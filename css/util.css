@@ -3086,9 +3086,12 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-family: Montserrat;
 	font-weight: 400;
 	font-size: 12px;
-	color: #222222;
+	color: #ffffff;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	padding: 10px 20px;
+	background-color: #2e584a;
+	border-radius: 5px;
 }
 
 .txt5 {
@@ -3695,12 +3698,12 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 -----------------------------------------------------------
 */
 .bg1-pattern {
-	background-image: url(../images/icons/pattern1.png);
+	background-image: url(../images/icons/Fondo1.png);
   	background-repeat: repeat;
 }
 
 .bg2-pattern {
-	background-image: url(../images/icons/pattern2.png);
+	background-image: url(../images/icons/Fondo1.png);
   	background-repeat: repeat;
 }
 
