@@ -124,7 +124,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-	color: #ec1d25;
+	color: #4FA18D;
 }
 
 /* ------------------------------------ */
@@ -137,7 +137,7 @@ p {
   font-weight: 400;
 	font-size: 15px;
 	line-height: 1.7;
-	color: #666666;
+	color: #41675D;
 	margin: 0px;
 }
 
@@ -448,7 +448,7 @@ input[type="date" i] {
 .select2-container--default .select2-results__option[aria-selected=true],
 .select2-container .select2-results__option--highlighted[aria-selected] {
   background-color: #ec1d25;
-  color: #fff;
+  color: #F5EDD8;
 }
 
 .select2-results__options{
@@ -489,7 +489,7 @@ input[type="date" i] {
   top: 0;
   left: 0;
   z-index: 100;
-  border-top: 5px solid #ec1d25;
+  border-top: 5px solid #EADABF;
 }
 
 .wrap_header {
@@ -509,7 +509,7 @@ input[type="date" i] {
 .header-fixed .wrap-menu-header {
   position: fixed;
   height: 100px;
-  background: rgba(46, 88, 76,0.9);
+  background: #2e584ce6;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -517,7 +517,7 @@ input[type="date" i] {
 -----------------------------------------------------------
 */
 .logo {
-  height: 50px;
+  height: 100px;
 }
 
 .logo > a{
@@ -577,17 +577,20 @@ input[type="date" i] {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  color: white;
+  color: #F5EDD8;
   padding: 15px;
 }
 
-.header-fixed .main_menu > li > a {
-  color: #FFFFFF;
+.main_menu > li:hover > a {
+  color: #4FA18D;
+  text-decoration: none;
 }
 
-.main_menu > li:hover > a {
-  color: #ec1d25;
-  text-decoration: none;
+.header-fixed .main_menu > li > a {
+  color: #F5EDD8;
+}
+.header-fixed .main_menu > li:hover > a {
+  color: #4FA18D;
 }
 
 /* ------------------------------------ */
@@ -659,32 +662,32 @@ input[type="date" i] {
 */
 .social a {
   font-size: 15px;
-  color: white;
+  color: #F5EDD8;
 }
 
 .header-fixed .social a {
-  color: #FFFFFF;
+  color: #F5EDD8;
 }
 
 .social a:hover {
-  color: #ec1d25;
+  color: #4FA18D;
 }
 
 .btn-show-sidebar {
   width: 26px;
   height: 15px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid #F5EDD8;
+  border-bottom: 2px solid #F5EDD8;
 }
 
 .header-fixed .btn-show-sidebar {
-  border-top: 2px solid #FFFFFF;
-  border-bottom: 2px solid #FFFFFF;
+  border-top: 2px solid #F5EDD8;
+  border-bottom: 2px solid #F5EDD8;
 }
 
 .btn-show-sidebar:hover {
-  border-top: 2px solid #ec1d25;
-  border-bottom: 2px solid #ec1d25;
+  border-top: 2px solid #4FA18D;
+  border-bottom: 2px solid #4FA18D;
 }
 
 @media (max-width: 1200px) {
@@ -833,9 +836,9 @@ input[type="date" i] {
   width: 60px;
   height: 60px;
   font-size: 18px;
-  color: white;
+  color: #4FA18D;
   position: absolute;
-  background-color: black;
+  background-color: #F0E4CF;
   opacity: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -860,7 +863,8 @@ input[type="date" i] {
 .arrow-slick1:hover,
 .arrow-slick2:hover,
 .arrow-slick3:hover {
-  background-color: #ec1d25;
+  background-color: #4FA18D;
+  color: #F0E4CF;
 }
 
 .next-slick1,
@@ -930,13 +934,13 @@ input[type="date" i] {
 
 
 .slick1-dots li button:hover {
-    border: 3px solid white;
-    background-color: #d41b22;
+    border: 3px solid #F0E4CF;
+    background-color: #4FA18D;
 }
 
 .slick1-dots li.slick-active button {
-    border: 3px solid white;
-    background-color: #d41b22;
+    border: 3px solid #F0E4CF;
+    background-color: #4FA18D;
 } 
 
 /*[ Caption ]
@@ -967,13 +971,13 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 .btn1 {
-  background: white;
-  border-radius: 10px;
+  background: #F5EDD8;
+  border-radius: 50px;
 }
 
 .btn1:hover {
-  background-color: #ec1d25;
-  color: white;
+  background-color: #41675D;
+  color: #F5EDD8;
 }
 
 /*[ Button3 ]
@@ -986,7 +990,7 @@ input[type="date" i] {
 
 .btn3:hover {
   background-color: #ec1d25;
-  color: white;
+  color: #F5EDD8;
 }
 
 
@@ -1000,7 +1004,7 @@ input[type="date" i] {
 }
 
 .btn2:hover {
-  background-color: #ec1d25;
+  background-color: #41675D;
   color: white;
 }
 
@@ -1011,10 +1015,17 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 .header-intro {
-  background-attachment: fixed;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* 1. Forzamos a que el fondo tenga una capa oscura transparente usando RGBA */
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  
+  /* 2. Activamos el modo de mezcla para que la foto y el color gris se fusionen perfectamente */
+  background-blend-mode: overlay !important;
+
+  /* 3. Tus propiedades originales intactas para el Parallax */
+  background-attachment: fixed !important;
+  background-position: center 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 
 
@@ -1084,13 +1095,13 @@ input[type="date" i] {
 
 
 .slick2-dots li button:hover {
-  border: 1px solid #d41b22;
-  background-color: #d41b22;
+  border: 1px solid #F0E4CF;
+  background-color: #4FA18D;
 }
 
 .slick2-dots li.slick-active button {
-  border: 1px solid #d41b22;
-  background-color: #d41b22;
+  border: 1px solid #F0E4CF;
+  background-color: #4FA18D;
 } 
 
 
@@ -1188,14 +1199,14 @@ input[type="date" i] {
 }
 
 .wrap-text-blo2 {
-  background-color: white;
+  background-color: #F5EDD8;
   width: 50%;
   min-height: 390px;
 }
 
 /* ------------------------------------ */
 .effect1 {
-  background-color: #cf2227;
+  background-color: #2e584ce6;
   opacity: 0.9;
   position: relative;
 }

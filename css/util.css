@@ -2957,7 +2957,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 700;
 	font-size: 90px;
 	line-height: 1.1;
-	color: white;
+	color: #F5EDD8;
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	word-spacing: 10px;
@@ -2967,7 +2967,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-family: Courgette;
 	font-size: 30px;
 	line-height: 1.2;
-	color: #d61c22;
+	color: #41675D;
 }
 
 .tit3 {
@@ -2975,7 +2975,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 1.2;
-	color: #222222;
+	color: #305047;
 	text-transform: uppercase;
 	letter-spacing: 6px;
 }
@@ -2985,7 +2985,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 1.2;
-	color: white;
+	color: #41675D;
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	word-spacing: 6px;
@@ -2996,7 +2996,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 1.2;
-	color: #222222;
+	color: #41675D;
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	word-spacing: 8px;
@@ -3007,7 +3007,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 1.2;
-	color: white;
+	color: #F5EDD8;
 	text-transform: uppercase;
 	letter-spacing: 6px;
 	word-spacing: 6px;
@@ -3060,7 +3060,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-family: Courgette;
 	font-size: 60px;
 	line-height: 1.1;
-	color: white;
+	color: #F5EDD8;
 }
 
 .txt2 {
@@ -3068,7 +3068,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 700;
 	font-size: 90px;
 	line-height: 1.1;
-	color: white;
+	color: #F0E4CF;
 	text-transform: uppercase;
 	letter-spacing: 10px;
 }
@@ -3076,9 +3076,9 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .txt3 {
 	font-family: Montserrat;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.1;
-	color: #ec1d25;
+	color: #41675D;
 	text-transform: uppercase;
 }
 
@@ -3086,7 +3086,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-family: Montserrat;
 	font-weight: 400;
 	font-size: 12px;
-	color: #ffffff;
+	color: #F0E4CF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	padding: 10px 20px;
@@ -3098,7 +3098,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-family: Poppins;
 	font-weight: 500;
 	font-size: 22px;
-	color: #333333;
+	color: #41675D;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
@@ -3116,7 +3116,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-family: Montserrat;
 	font-weight: 700;
 	font-size: 50px;
-	color: #ec1d25;
+	color: #41675D;
 	line-height: 1.1;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -3362,6 +3362,13 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	line-height: 1.8;
 }
 
+.titulo-descubrir {
+    color: #F5EDD8;
+}
+
+.titulo-banquete {
+    color: #F5EDD8;
+}
 
 /*[ Color ]
 -----------------------------------------------------------
@@ -3371,7 +3378,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .color2 {color: #cccccc;}
 .color3 {color: #333333;}
 
-.color0-hov:hover {color: #ec1d25;}
+.color0-hov:hover {color: #4FA18D;}
 
 
 
